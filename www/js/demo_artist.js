@@ -77,8 +77,9 @@ function getRelated(artist, limit)
 	}})
 }
 
-$(function(){
+$('#artistPage').live('pageshow', function(event){
 	var name = getVar('artist');
+	console.log(name);
 	loadArtist(name);
 	//setArtistImage(artist);
 	//getRelated(artist, 5);
