@@ -79,8 +79,9 @@ function getRelated(artist, limit)
 
 alert('bar');
 $('#artistPage').live('pageshow', function(event){
-	alert('foo');
+	
 	var name = getVar('artist');
+	alert(name);
 	console.log(name);
 	loadArtist(name);
 	//setArtistImage(artist);
