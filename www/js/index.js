@@ -17,7 +17,7 @@
  * under the License.
  */
 
-$('#deviceready').bind('pageinit', function(event){
+$(document).bind('pageinit', function(event){
 	$('.listening').attr('style', 'display:none;');
 	$('.received').attr('style', 'display:block;');
 });
