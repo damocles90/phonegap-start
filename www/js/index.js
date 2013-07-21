@@ -16,6 +16,13 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
+$('#deviceready').bind('pageinit', function(event){
+	$('.listening').attr('style', 'display:none;');
+	$('.received').attr('style', 'display:block;');
+});
+
+/*
 var app = {
     // Application Constructor
     initialize: function() {
@@ -47,3 +54,4 @@ var app = {
         console.log('Received Event: ' + id);
     }
 };
+*/
