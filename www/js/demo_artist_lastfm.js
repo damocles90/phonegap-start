@@ -36,6 +36,7 @@ function setArtistImage(artist)
 {
 	lastfm.artist.getInfo({artist: artist}, {success: function (data){
 		//console.log(data);
+		alert(data);
 		var artistImage = data.artist.image[2]["#text"];
 		$(".artistImage").attr('src', artistImage);
 		console.log(artistImage);
