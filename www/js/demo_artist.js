@@ -11,10 +11,21 @@ var sevenDigital = new SevenDigital({
 	apiSecret : 'wz2j3zp2uugu5xvz'
 });
 
+function getUrlVars() {
+    var vars = [], hash;
+    var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+    for(var i = 0; i < hashes.length; i++)
+    {
+        hash = hashes[i].split('=');
+        vars.push(hash[0]);
+        vars[hash[0]] = hash[1];
+    }
+    return vars;
+}
+
 function getVar(name)
 {
-	var match = RegExp('[?&]' + name + '=([^&]*)').exec(window.location.search);
-	return match && decodeURIComponent(match[1].replace(/\+/g, ' '))
+	return getUrlVars()[name];
 }
 
 function getArtistDiv(name, image)
@@ -81,9 +92,9 @@ alert('bar');
 $('#artistPage').live('pageshow', function(event){
 	
 	
-	var name = localStorage.getItem('artist');
-	name = name? name: 'Cher';
-	alert(name);
+	var name = getVar('artist');
+	//name = name? name: 'Cher';
+	alert("name: " + name);
 	console.log(name);
 	loadArtist(name);
 	//setArtistImage(artist);
