@@ -156,9 +156,10 @@ function LastFM(options){
 				array.push(encodeURIComponent(param) + "=" + encodeURIComponent(params[param]));
 			}
 
+			alert(apiUrl + '?' + array.join('&').replace(/%20/g, '+'));
 			/* Set script source. */
 			script.src = apiUrl + '?' + array.join('&').replace(/%20/g, '+');
-
+			
 			/* Append script element. */
 			head.appendChild(script);
 		}

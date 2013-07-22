@@ -4,7 +4,6 @@
   <script type="text/javascript" src="js/lastfm.api.cache.js"></script>
   <script type="text/javascript" src="js/lastfm.api.md5.js"></script>
   <script type="text/javascript" src="js/lastfm.api.js"></script>
-  <script type="text/javascript" src="js/iTunesPreviewPlayer.js"></script>
   <script type="text/javascript" src="js/demo_album_lastfm.js"></script>
   
   <link href="css/iTunesPreviewPlayer.css" rel="stylesheet" type="text/css"/>
@@ -12,12 +11,14 @@
   
 </head>
 <body>
-  <div id="album">
-    <h1 class="albumName"> </h1>
-    <div><img class="albumImage"/></div>
-  </div>
-  <div id="tracksContainer">
-    <h2>Tracks</h2>
+  <div id="albumPage" data-role="page" data-add-back-btn="true">
+    <div id="album" data-role="content">
+      <h1 class="albumName"> </h1>
+      <div><img class="albumImage"/></div>
+      <div id="tracksContainer">
+        <h2>Tracks</h2>
+      </div>
+    </div>
   </div>
 </body>
 </html>

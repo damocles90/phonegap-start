@@ -74,6 +74,8 @@ $('#artistPage').live('pageshow', function(event){
 	var artist = getVar('artist');
 	$(".artistName").text(artist);
 	$(".artist_album_link").attr("href", "artist_albums_lastfm.html?artist="+artist+"");
+	
+	
 	setArtistImage(artist);
 	getRelated(artist, 5);
 });
