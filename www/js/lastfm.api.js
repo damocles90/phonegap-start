@@ -108,46 +108,6 @@ function LastFM(options){
 			params.callback = jsonp;
 			params.format   = 'json';
 
-			/* Create JSONP callback function. */
-			window[jsonp] = function(data){
-				/* Is a cache available?. */
-				if(typeof(cache) != 'undefined'){
-					var expiration = cache.getExpirationTime(params);
-
-					if(expiration > 0){
-						cache.store(hash, data, expiration);
-					}
-				}
-
-				/* Call user callback. */
-				if(typeof(data.error) != 'undefined'){
-					if(typeof(callbacks.error) != 'undefined'){
-						callbacks.error(data.error, data.message);
-					}
-				}
-				else if(typeof(callbacks.success) != 'undefined'){
-					callbacks.success(data);
-				}
-
-				/* Garbage collect. */
-				window[jsonp] = undefined;
-
-				try{
-					delete window[jsonp];
-				}
-				catch(e){
-					/* Nothing. */
-				}
-
-				/* Remove script element. */
-				if(head){
-					head.removeChild(script);
-				}
-			};
-
-			/* Create script element to load JSON data. */
-			var head   = document.getElementsByTagName("head")[0];
-			var script = document.createElement("script");
 
 			/* Build parameter string. */
 			var array = [];
