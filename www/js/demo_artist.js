@@ -80,7 +80,9 @@ function getRelated(artist, limit)
 alert('bar');
 $('#artistPage').live('pageshow', function(event){
 	
-	var name = getVar('artist');
+	
+	var name = localStorage.getItem('artist');
+	name = name? name: 'Cher';
 	alert(name);
 	console.log(name);
 	loadArtist(name);
