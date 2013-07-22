@@ -69,7 +69,7 @@ function getRelated(artist, limit)
 	}})
 }
 
-$('#artistPage').live('pageshow', function(event){
+$('#artistPage').on('pageshow', function(event){
 	
 	var artist = getVar('artist');
 	$(".artistName").text(artist);
