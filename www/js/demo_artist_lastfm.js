@@ -69,9 +69,9 @@ function getRelated(artist, limit)
 	}})
 }
 
-$('#artistPage').on('pageshow', function(event){
+$('#artistPage').live('pageshow', function(event){
+	
 	var artist = getVar('artist');
-	alert(artist);
 	$(".artistName").text(artist);
 	$(".artist_album_link").attr("href", "artist_albums_lastfm.html?artist="+artist+"");
 	
