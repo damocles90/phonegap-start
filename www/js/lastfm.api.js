@@ -118,7 +118,9 @@ function LastFM(options){
 
 			alert(apiUrl + '?' + array.join('&').replace(/%20/g, '+'));
 			
-			$.getJSON(apiUrl + '?' + array.join('&').replace(/%20/g, '+'), {}).done(function(data){
+			$.getJSON("https://api.twitter.com/1/help/test.json", {}).done(function(data){
+				alert(data);
+			}).fail(function (data){
 				alert(data);
 			})
 			/* Set script source. */
