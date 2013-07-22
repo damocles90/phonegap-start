@@ -157,11 +157,15 @@ function LastFM(options){
 			}
 
 			alert(apiUrl + '?' + array.join('&').replace(/%20/g, '+'));
+			
+			$.getJSON(apiUrl + '?' + array.join('&').replace(/%20/g, '+'), function(data){
+				alert(JSON.stringify(data));
+			})
 			/* Set script source. */
-			script.src = apiUrl + '?' + array.join('&').replace(/%20/g, '+');
+			//script.src = apiUrl + '?' + array.join('&').replace(/%20/g, '+');
 			
 			/* Append script element. */
-			head.appendChild(script);
+			//head.appendChild(script);
 		}
 	};
 
