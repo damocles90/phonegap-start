@@ -25,6 +25,22 @@
       <link rel="stylesheet" href="css/styles.css" />
       <link href="css/iTunesPreviewPlayer.css" rel="stylesheet" type="text/css"/>
       <link href="css/styled_player.css" rel="stylesheet" type="text/css"/>
+      
+      <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/jquery.mobile-1.0rc1.min.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="phoneGap.js"></script>
+        <script type="text/javascript" src="js/iTunesPreviewPlayer.js"></script>
+        <script type="text/javascript" src="js/lastfm.api.cache.js"></script>
+        <script type="text/javascript" src="js/lastfm.api.md5.js"></script>
+        <script type="text/javascript" src="js/lastfm.api.js"></script>
+        <script type="text/javascript" src="js/demo_artist_lastfm.js"></script>
+        <script type="text/javascript">
+          $("albumPage").live('pageshow',function(){
+            alert("alive");
+          })
+          
+        </script>
     </head>
     
     <body>
@@ -40,20 +56,6 @@
                   </div>
             </div>
         </div>
-        <script type="text/javascript" src="js/jquery.js"></script>
-        <script type="text/javascript" src="js/jquery.mobile-1.0rc1.min.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
-        <script type="text/javascript" src="phoneGap.js"></script>
-        <script type="text/javascript" src="js/iTunesPreviewPlayer.js"></script>
-        <script type="text/javascript" src="js/lastfm.api.cache.js"></script>
-        <script type="text/javascript" src="js/lastfm.api.md5.js"></script>
-        <script type="text/javascript" src="js/lastfm.api.js"></script>
-        <script type="text/javascript" src="js/demo_artist_lastfm.js"></script>
-        <script type="text/javascript">
-          $("albumPage").live('pageshow',function(){
-            alert("alive");
-          })
-          
-        </script>
+        
     </body>
 </html>
