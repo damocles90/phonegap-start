@@ -23,6 +23,8 @@
       <meta name="viewport" content="width=device-width,initial-scale=1"/>
       <link rel="stylesheet" href="css/jquery.mobile-1.0rc1.min.css" />
       <link rel="stylesheet" href="css/styles.css" />
+      <link href="css/iTunesPreviewPlayer.css" rel="stylesheet" type="text/css"/>
+      <link href="css/styled_player.css" rel="stylesheet" type="text/css"/>
     </head>
     
     <body>
@@ -32,16 +34,20 @@
             </div>
             <div data-role="content">
                 <p class="listening">Connecting to Device</p>
-                <p class="received"><a href="artist_lastfm.html?artist=Cher">Start</a></p>
+                <div class="received">
+                  <p><a href="artist_lastfm.html?artist=Cher">Start</a></p>
+                  <p><a href="album_lastfm.html?artist=Cher&album=Believe">Sample album</a></p>
+                  </div>
             </div>
         </div>
         <script type="text/javascript" src="js/jquery.js"></script>
         <script type="text/javascript" src="js/jquery.mobile-1.0rc1.min.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript" src="phoneGap.js"></script>
-  <script type="text/javascript" src="js/lastfm.api.cache.js"></script>
-  <script type="text/javascript" src="js/lastfm.api.md5.js"></script>
-  <script type="text/javascript" src="js/lastfm.api.js"></script>
-  <script type="text/javascript" src="js/demo_artist_lastfm.js"></script>
+        <script type="text/javascript" src="js/iTunesPreviewPlayer.js"></script>
+        <script type="text/javascript" src="js/lastfm.api.cache.js"></script>
+        <script type="text/javascript" src="js/lastfm.api.md5.js"></script>
+        <script type="text/javascript" src="js/lastfm.api.js"></script>
+        <script type="text/javascript" src="js/demo_artist_lastfm.js"></script>
     </body>
 </html>
