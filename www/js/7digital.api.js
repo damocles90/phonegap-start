@@ -65,7 +65,9 @@ function SevenDigital(options){
 				url: reqLocation,
 			};
 			
-			ajaxObj.success = callbacks.success ? function(data){callbacks.success	(getResponse(data));} : undefined;
+			alert(apiUrl);
+			
+			ajaxObj.success = callbacks.success ? function(data){alert(data);callbacks.success	(getResponse(data));} : undefined;
 			ajaxObj.error = callbacks.error;
 			//console.log(reqLocation);
 			$.ajax(ajaxObj);
