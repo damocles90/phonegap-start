@@ -88,6 +88,6 @@ $('#artistPage').live('pageshow', function(event){
 	$(".artist_album_link").attr("href", "artist_albums_lastfm.html?artist="+artist+"");
 	
 	
-	setArtistImage(artist);
-	getRelated(artist, 5);
+	//setArtistImage(artist);
+	//getRelated(artist, 5);
 });
