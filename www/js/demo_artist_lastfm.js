@@ -78,7 +78,7 @@ $('#artistPage').live('pageshow', function(event){
 	});*/
 	
 	$.getJSON("http://blogname.tumblr.com/api/read/json?num=2&callback=?", {format: "jsonp"}).done(function(data){
-		alert(data);
+		alert("data: "+ data)
 	});
 	
 	alert("Page ready");
