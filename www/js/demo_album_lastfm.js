@@ -110,7 +110,7 @@ function getTracks(artist, album)
 	}});
 }
 
-$(function(){
+$('#albumPage').live("pageshow", function(){
 	var artist = getVar('artist');
 	var album = getVar('album');
 	$(".albumName").text(artist + "-" + album);

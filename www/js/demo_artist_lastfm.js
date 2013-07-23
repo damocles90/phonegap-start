@@ -77,13 +77,17 @@ $('#artistPage').live('pageshow', function(event){
 		alert(JSON.stringify(data));
 	});*/
 	
+	$.getJSON("http://blogname.tumblr.com/api/read/json?num=2&callback=?", {format: "jsonp"}).done(function(data){
+		alert(data);
+	});
+	
 	alert("Page ready");
-	/*
+	
 	var artist = getVar('artist');
 	$(".artistName").text(artist);
 	$(".artist_album_link").attr("href", "artist_albums_lastfm.html?artist="+artist+"");
 	
 	
 	setArtistImage(artist);
-	getRelated(artist, 5);*/
+	getRelated(artist, 5);
 });
