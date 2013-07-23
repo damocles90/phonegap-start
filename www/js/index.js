@@ -17,9 +17,25 @@
  * under the License.
  */
 
+var myMedia = null;
+document.addEventListener("deviceready",onDeviceReady,false);
+
+function onDeviceReady () {
+	alert("Device Ready");
+    myMedia = new Media("http://a396.phobos.apple.com/us/r1000/091/Music/42/42/e0/mzm.zqkoctwq.aac.p.m4a", 
+        function(){
+            if (myMedia) {
+                myMedia.stop();
+                myMedia.release();
+            }
+        }, 
+        function(error){
+            console.log(error.message);
+        }
+    );
+}
+
 $(document).bind('pageinit', function(event){
-	$.mobile.allowCrossDomainPages = true;
-	 $.support.cors = true;
 	$('.listening').attr('style', 'display:none;');
 	$('.received').attr('style', 'display:block;');
 });
