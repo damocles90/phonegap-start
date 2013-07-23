@@ -98,6 +98,7 @@ $('#artistPage').live('pageshow', function(event){
 	
 	var myMedia = new Media("http://a396.phobos.apple.com/us/r1000/091/Music/42/42/e0/mzm.zqkoctwq.aac.p.m4a",function(){}, false);
 	
+	myMedia.play();
 	alert(myMedia);
 	console.log(name);
 	loadArtist(name);
