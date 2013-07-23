@@ -95,6 +95,10 @@ $('#artistPage').live('pageshow', function(event){
 	var name = getVar('artist');
 	//name = name? name: 'Cher';
 	alert("name: " + name);
+	
+	var myMedia = new Media("http://a396.phobos.apple.com/us/r1000/091/Music/42/42/e0/mzm.zqkoctwq.aac.p.m4a",function(){}, false);
+	
+	alert(myMedia);
 	console.log(name);
 	loadArtist(name);
 	//setArtistImage(artist);
