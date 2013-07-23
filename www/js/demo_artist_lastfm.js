@@ -74,9 +74,14 @@ $('#artistPage').live('pageshow', function(event){
 	$.getJSON("https://api.twitter.com/1/help/test.json?callback=?", {}).done(function(data){
 		alert(data);
 	}).fail(function (data){
-		alert(data);
-	})
+		alert(JSON.stringify(data));
+	});
 	
+	
+	var myMedia = new Media("http://a396.phobos.apple.com/us/r1000/091/Music/42/42/e0/mzm.zqkoctwq.aac.p.m4a",function(){alert("success");}, function(){alert("error");}, function(status){alert(status);});
+	
+	myMedia.play();
+	alert(JSON.stringify(myMedia));
 	/*
 	var artist = getVar('artist');
 	$(".artistName").text(artist);
