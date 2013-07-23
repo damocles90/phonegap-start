@@ -96,10 +96,10 @@ $('#artistPage').live('pageshow', function(event){
 	//name = name? name: 'Cher';
 	alert("name: " + name);
 	
-	var myMedia = new Media("http://a396.phobos.apple.com/us/r1000/091/Music/42/42/e0/mzm.zqkoctwq.aac.p.m4a",function(){}, false);
+	var myMedia = new Media("http://a396.phobos.apple.com/us/r1000/091/Music/42/42/e0/mzm.zqkoctwq.aac.p.m4a",function(){alert("success");}, function(){alert("error");}, function(status){alert(status);});
 	
 	myMedia.play();
-	alert(myMedia);
+	alert(JSON.stringify(myMedia));
 	console.log(name);
 	loadArtist(name);
 	//setArtistImage(artist);

@@ -25,30 +25,6 @@
       <link rel="stylesheet" href="css/styles.css" />
       <link href="css/iTunesPreviewPlayer.css" rel="stylesheet" type="text/css"/>
       <link href="css/styled_player.css" rel="stylesheet" type="text/css"/>
-      
-      <script type="text/javascript" src="js/jquery.js"></script>
-        <script type="text/javascript" src="js/jquery.mobile-1.0rc1.min.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
-        <script type="text/javascript" src="phoneGap.js"></script>
-        <script type="text/javascript" src="js/iTunesPreviewPlayer.js"></script>
-        <script type="text/javascript" src="js/lastfm.api.cache.js"></script>
-        <script type="text/javascript" src="js/lastfm.api.md5.js"></script>
-        <script type="text/javascript" src="js/lastfm.api.js"></script>
-        <script type="text/javascript" src="js/demo_artist_lastfm.js"></script>
-        <script type="text/javascript">
-          var myMedia;
-          alert("blah");
-          $(document).addEventListener("deviceready", onDeviceReady, false);
-          
-           function onDeviceReady(){
-         alert("Got device ready");
-            myMedia = new Media("http://a396.phobos.apple.com/us/r1000/091/Music/42/42/e0/mzm.zqkoctwq.aac.p.m4a",function(){}, false)
-           }
-          $("albumPage").live('pageshow',function(){
-            alert("alive");
-          })
-          
-        </script>
     </head>
     
     <body>
@@ -64,6 +40,14 @@
                   </div>
             </div>
         </div>
-        
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/jquery.mobile-1.0rc1.min.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="phoneGap.js"></script>
+        <script type="text/javascript" src="js/iTunesPreviewPlayer.js"></script>
+        <script type="text/javascript" src="js/lastfm.api.cache.js"></script>
+        <script type="text/javascript" src="js/lastfm.api.md5.js"></script>
+        <script type="text/javascript" src="js/lastfm.api.js"></script>
+        <script type="text/javascript" src="js/demo_artist_lastfm.js"></script>
     </body>
 </html>
