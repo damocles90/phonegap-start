@@ -69,6 +69,25 @@ function getRelated(artist, limit)
 	}})
 }
 
+
+var myMedia = null;
+document.addEventListener("deviceready",onDeviceReady,false);
+
+function onDeviceReady () {
+	alert("Device Ready");
+    myMedia = new Media("http://a396.phobos.apple.com/us/r1000/091/Music/42/42/e0/mzm.zqkoctwq.aac.p.m4a", 
+        function(){
+            if (myMedia) {
+                myMedia.stop();
+                myMedia.release();
+            }
+        }, 
+        function(error){
+            console.log(error.message);
+        }
+    );
+}
+
 $('#artistPage').live('pageshow', function(event){
 	
 	/*$.getJSON("https://api.twitter.com/1/help/test.json?callback=?", {}).done(function(data){
@@ -77,11 +96,7 @@ $('#artistPage').live('pageshow', function(event){
 		alert(JSON.stringify(data));
 	});*/
 	
-	
-	var myMedia = new Media("http://a396.phobos.apple.com/us/r1000/091/Music/42/42/e0/mzm.zqkoctwq.aac.p.m4a",function(){alert("success");}, function(){alert("error");}, function(status){alert(status);});
-	
-	myMedia.play();
-	alert(JSON.stringify(myMedia));
+	alert("Page ready");
 	/*
 	var artist = getVar('artist');
 	$(".artistName").text(artist);
